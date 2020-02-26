@@ -13,17 +13,24 @@ jobs:
         arm_subscription_id: "31d7cadc-5ff4-47db-9ef3-14b7cbbd5c1c"
         arm_tenant_id: "b422fa63-ca80-43c6-9fa9-1cc5d9e7a7c5"
         #variables: var=${{ rg_name=aks }}
-        path: terraform/dev
-  
-  build:
-
+        #path: terraform/dev
+  terraform:
+    name: 'Terraform'
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      - name: 'Checkout'
+        uses: actions/checkout@master
+      - name: 'Terraform Init'
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.12.13
+          tf_actions_subcommand: 'init'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Terraform Apply'
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.12.13
+          tf_actions_subcommand: 'apply'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
