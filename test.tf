@@ -1,3 +1,7 @@
+terraform {
+  backend "azurerm" {
+  }
+}
 resource "azurerm_resource_group" "example" {
   name     = "testResourceGroup1"
   location = "West US"
