@@ -1,6 +1,8 @@
-terraform {
-  backend "azurerm" {
-    storage_account_name = "storage_account_name"
-    container_name       = "storage_container_name"
+resource "azurerm_resource_group" "example" {
+  name     = "testResourceGroup1"
+  location = "West US"
+
+  tags = {
+    environment = "Production"
   }
 }
