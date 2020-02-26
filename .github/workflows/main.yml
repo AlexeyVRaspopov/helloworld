@@ -13,4 +13,4 @@ jobs:
         arm_subscription_id: "31d7cadc-5ff4-47db-9ef3-14b7cbbd5c1c"
         arm_tenant_id: "b422fa63-ca80-43c6-9fa9-1cc5d9e7a7c5"
         #variables: var=${{ rg_name=aks }}
-        #path: /
+        path: workflows
