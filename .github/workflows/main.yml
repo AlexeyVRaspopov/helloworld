@@ -6,6 +6,8 @@ jobs:
   provisioning:
     runs-on: ubuntu-latest
     steps:
+    -  run: |
+         ls
     - uses: ams0/terraform-apply-for-azure-action@v1
       with:
         arm_client_id: "ba93398b-9633-414a-9109-599620476b87"
