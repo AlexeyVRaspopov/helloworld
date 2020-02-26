@@ -15,5 +15,6 @@ jobs:
         arm_client_secret: "fN=0d60dPpZb2laY/HsEJRtAKltiBK=]"
         arm_subscription_id: "31d7cadc-5ff4-47db-9ef3-14b7cbbd5c1c"
         arm_tenant_id: "b422fa63-ca80-43c6-9fa9-1cc5d9e7a7c5"
+        arm_access_key: "w1/1eVs1y123A1Jy0MHyzkFuLyvook7rvGbklOZbWZ3nhsV+/3YHl/rzyTBqZZ082+EHOYLpEKhuMzhTMVeD5Q=="
         #variables: var=${{ rg_name=aks }}
         path: ./
